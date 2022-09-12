@@ -1,0 +1,43 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	DOCUMENT SETUP
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[
+  12pt,       % 10pt, 11pt, 12pt
+  a4paper,    % a4paper, letterpaper, a5paper, b5paper, executivepaper, legalpaper
+  %final,      % draft
+  %onecolumn,  % twocolumn
+  %oneside,    % twoside
+  %notitlepage, % titlepage
+  openright % openright, openany
+]{book}
+
+% Template preamble files. These should not be modified.
+\input{config/packages.tex}
+\input{config/configuration}
+\input{config/document_config}
+
+% Document Title, Author, and Date
+\title{
+  \ttitle
+}
+\author{
+  \tauthor
+}
+\date{\today}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	DOCUMENT START
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\selectlanguage{slovene}
+\frontmatter
+\setcounter{page}{1} %
+\renewcommand{\thepage}{}       % preprečimo težave s številkami strani v kazalu
+
+\include{sections/title.tex}
+
+\include{sections/body.tex}
+\include{sections/endpage.tex}
+
+\end{document}
